@@ -69,6 +69,8 @@ def listOfDistances(a):
 
 list = listOfDistances(listOfPostcodes)
 
+newList = sorted(list, key=lambda Distance: Distance.distance)
+
 for x in range(len(list)):
-    print(list[x].postcode1,list[x].postcode2,list[x].distance)
+    print(newList[x].postcode1,newList[x].postcode2,newList[x].distance)
 
